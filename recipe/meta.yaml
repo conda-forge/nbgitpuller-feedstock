@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: nbgitpuller
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/nbgitpuller/nbgitpuller-{{ version }}.tar.gz
-  sha256: 4eb1b64da816804bb6253afceb2bf0dc4630ba7706a081e0832ae30eb62ff406
+  sha256: e026c00b577aa7eff7fd4ac759a802d922c3912a82275446ec85b3b044c154d9
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - gitpuller = nbgitpuller.pull:main
 
@@ -35,7 +35,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "Notebook Extension to do one-way synchronization of git repositories"
+  summary: Notebook Extension to do one-way synchronization of git repositories
 
 extra:
   recipe-maintainers:
