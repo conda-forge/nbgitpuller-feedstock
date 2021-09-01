@@ -17,10 +17,12 @@ build:
 
 requirements:
   host:
+    - nodejs >=12
     - python >=3
     - pip
   run:
     - python >=3
+    - jupyter_server >=1.10.1
     - notebook >=5.5.0
     - tornado
 
@@ -43,3 +45,4 @@ about:
 extra:
   recipe-maintainers:
     - ocefpaf
+    - consideratio
