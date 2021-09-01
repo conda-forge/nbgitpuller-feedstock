@@ -19,6 +19,7 @@ requirements:
   host:
     - python >=3
     - pip
+    - nodejs
   run:
     - python >=3
     - jupyter_server >=1.10.1
