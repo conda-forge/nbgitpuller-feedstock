@@ -17,9 +17,10 @@ build:
 
 requirements:
   host:
-    - nodejs >=12
     - python >=3
     - pip
+    - nodejs >=12
+    - jupyter-packaging
   run:
     - python >=3
     - jupyter_server >=1.10.1
