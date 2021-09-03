@@ -19,6 +19,15 @@ requirements:
   host:
     - python >=3
     - pip
+    # pyproject.toml doesn't seem to be respected, due to this, we need to
+    # explicitly make our build dependency jupyter-packaging available. This
+    # could be resolved also by wrapping the setup.py's use of jupyter-packaging
+    # within a try/catch block.
+    #
+    # See https://github.com/conda/conda-build/issues/3507 and
+    # https://github.com/jupyter/jupyter-packaging#as-a-build-requirement for
+    # more relevant details.
+    #
     - jupyter-packaging
   run:
     - python >=3
