@@ -19,7 +19,6 @@ requirements:
   host:
     - python >=3
     - pip
-    - nodejs >=12
     - jupyter-packaging
   run:
     - python >=3
