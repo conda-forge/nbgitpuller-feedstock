@@ -1,11 +1,11 @@
-About nbgitpuller
-=================
+About nbgitpuller-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nbgitpuller-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/data-8/nbgitpuller
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nbgitpuller-feedstock/blob/main/LICENSE.txt)
 
 Summary: Notebook Extension to do one-way synchronization of git repositories
 
