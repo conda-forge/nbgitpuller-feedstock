@@ -11,13 +11,14 @@ source:
 build:
   number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - gitpuller = nbgitpuller.pull:main
 
 requirements:
   host:
     - python {{ python_min }}
+    - setuptools
     - pip
     # pyproject.toml doesn't seem to be respected, due to this, we need to
     # explicitly make our build dependency jupyter-packaging available. This
