@@ -5,19 +5,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/n/nbgitpuller/nbgitpuller-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/n/nbgitpuller/nbgitpuller-{{ version }}.tar.gz
   sha256: c3d8e13215d31387e0ef0d264cdc8676cfe4f364c27f3664b4e7bd04996ee64d
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - gitpuller = nbgitpuller.pull:main
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
+    - setuptools
     - pip
     # pyproject.toml doesn't seem to be respected, due to this, we need to
     # explicitly make our build dependency jupyter-packaging available. This
@@ -30,7 +31,7 @@ requirements:
     #
     - jupyter-packaging
   run:
-    - python >=3
+    - python >={{ python_min }}
     - jupyter_server >=1.10.1
     - notebook >=5.5.0
     - tornado
@@ -38,6 +39,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - nbgitpuller
   commands:
