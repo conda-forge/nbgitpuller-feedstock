@@ -1,4 +1,4 @@
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: nbgitpuller
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/nbgitpuller/nbgitpuller-{{ version }}.tar.gz
-  sha256: c3d8e13215d31387e0ef0d264cdc8676cfe4f364c27f3664b4e7bd04996ee64d
+  sha256: 3a3dfe985642738ac01acba29e6703a2cd2468dd768b6f004eb74e836d22515d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
